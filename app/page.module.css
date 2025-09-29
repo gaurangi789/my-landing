@@ -34,6 +34,35 @@
   grid-row-start: 2;
 }
 
+.hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.heroContent h1 {
+  font-size: 56px;
+  line-height: 1.05;
+}
+
+.heroContent p {
+  margin-top: 12px;
+  color: rgba(var(--gray-rgb), 0.7);
+}
+
+.heroArt {
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  background: radial-gradient(1200px 400px at 20% 20%, var(--gray-alpha-100), transparent),
+              linear-gradient(180deg, var(--gray-alpha-100), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -59,6 +88,12 @@
 .ctas {
   display: flex;
   gap: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .ctas a {
@@ -91,10 +126,75 @@ a.secondary {
   min-width: 158px;
 }
 
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(180deg, var(--gray-alpha-100), transparent);
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(var(--gray-rgb), 0.6);
+}
+
+.lead {
+  color: rgba(var(--gray-rgb), 0.75);
+}
+
+.sectionAlt {
+  width: 100%;
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.showcasePanel {
+  height: 160px;
+  border-radius: 12px;
+  background: radial-gradient(200px 120px at 30% 30%, var(--gray-alpha-100), transparent),
+              linear-gradient(180deg, var(--gray-alpha-100), transparent);
+  border: 1px solid var(--gray-alpha-200);
+}
+
+.ctaSection {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
 .footer {
   grid-row-start: 3;
   display: flex;
   gap: 24px;
+
 }
 
 .footer a {
@@ -133,6 +233,14 @@ a.secondary {
 
   .main {
     align-items: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
   }
 
   .main ol {

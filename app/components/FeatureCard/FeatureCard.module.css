@@ -1,0 +1,47 @@
+/* components/FeatureCard/FeatureCard.module.css */
+
+.card {
+    padding: 20px;
+    background-color: black; 
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%; /* Ensures all cards are same height if content differs */
+}
+
+.imageWrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    /* Optional: Ensure image fits nicely */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #0f0; 
+    color: black;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+}
