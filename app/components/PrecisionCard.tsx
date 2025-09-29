@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import styles from './PrecisionCard.module.css';
 
 interface PrecisionCardProps {
@@ -31,7 +32,14 @@ export default function PrecisionCard({
         </a>
       </div>
       <div className={styles.imageContainer}>
-        <img src={imageSrc} alt={imageAlt} className={styles.image} />
+        <Image 
+          src={imageSrc} 
+          alt={imageAlt} 
+          width={458}
+          height={200}
+          className={styles.image}
+          priority
+        />
       </div>
     </div>
   );
