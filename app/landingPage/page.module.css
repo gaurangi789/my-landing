@@ -120,7 +120,7 @@
   /* Mobile-specific ring wrapper with absolute positioning */
   .ringAbsoluteWrapperMobile {
     position: absolute;
-    bottom: -180px; /* Start position - ring mostly below viewport */
+    bottom: -250px; /* Start position - only top portion visible matching Figma */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -141,7 +141,7 @@
   /* Mobile layout for beautifulTextOuterWrapper */
   @media (max-width: 768px) {
     .hero {
-      margin-bottom: 150px; /* Extra space for ring */
+      margin-bottom: 100px; /* Adjusted space for new ring position */
     }
     
     .beautifulTextOuterWrapper {
@@ -169,14 +169,14 @@
     .heroFrame {
       height: clamp(400px, 60vh, 500px);
       position: relative;
-      overflow: visible; /* Allow ring to extend outside */
+      overflow: hidden; /* Hide ring parts outside the frame */
     }
     
     .overlay {
       padding-top: 0;
       padding-bottom: 20px;
       position: relative;
-      overflow: visible; /* Allow ring to extend outside */
+      overflow: visible; /* Allow ring to extend outside overlay but contained by heroFrame */
     }
     
     .eyebrow {
