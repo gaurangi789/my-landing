@@ -16,7 +16,7 @@
 }
 
 .hero {
-  margin-bottom: 32px;
+
   max-height: 730px;
   width: 100%;
   position: relative;
@@ -120,7 +120,7 @@
   /* Mobile-specific ring wrapper with absolute positioning */
   .ringAbsoluteWrapperMobile {
     position: absolute;
-    bottom: -250px; /* Start position - only top portion visible matching Figma */
+    bottom: -220px; /* Start position - only top portion visible matching Figma */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -273,7 +273,7 @@
     opacity: 1;
     border-radius: 2.02px;
     background-color: #000000;
-    margin-top: 1px;
+    margin-top: 2px;
   }
 
   .fadeTextWrapper {
@@ -302,7 +302,7 @@
         font-size: 45px;
         letter-spacing: -4%;
         text-align: left;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
     }
     .cardsContainer{
         display: grid;
@@ -314,19 +314,73 @@
     .accuracyWrapper{
         display: flex;
         flex-direction: row;
-        width: 86%;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        margin-top: 500px;
+        margin-top: 100px;
     }
     .accuracyLeft{
-        width: 30%;
+        width: 35%;
         display: flex;
         flex-direction: column;
 
     }
     .accuracyRight{
-        width: 70%;
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+    .accuracyCardsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Mobile styles for accuracy section */
+    @media (max-width: 768px) {
+        .accuracyWrapper {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        .accuracyLeft {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .accuracyRight {
+            width: 100%;
+        }
+
+        .accuracyCardsGrid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .coloredBoxes {
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+            align-items: stretch;
+        }
+
+        .heading {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .sublimeDesignWonder {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
     }
     .accuracyAboutWrapper{
         display: flex;
@@ -613,7 +667,7 @@
 .mobileFeatureBlocks {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .mobileFeatureBlock {
@@ -703,7 +757,33 @@
         font-size: 28px;
         text-align: center;
     }
+    .heading{
+        font-family: Inter;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 36px;
+        letter-spacing: -4%;
+        text-align: left;
+        margin-bottom: 47px;
+    }
 }
+.accuracyCard1{
+    display: flex;
+    flex-direction: column;
+    align-items: bottom;
+    align-items: right;
+    margin-right: 10px;
+
+    
+}
+.accuracyCard2{
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    align-items: left;
+   
+}
+
 
 
 

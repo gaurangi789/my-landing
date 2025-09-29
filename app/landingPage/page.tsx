@@ -8,6 +8,7 @@ import FadeText from "./FadeText";
 import ParallaxRing from "./ParallaxRing";
 import PrecisionTemplate from "../components/precision/PrecisionTemplate";
 import Box from "../components/coloredBoxes/Box";
+import AccuracyCard from "../components/accuracyCard/AccuracyCard";
 import CarouselSection from "./CarouselSection";
 import MobileCarouselSection from "./MobileCarouselSection";
 import { useIsMobile } from "../hooks/useIsMobile";
@@ -47,6 +48,37 @@ export default function LandingPage() {
       label: "Grams Light", 
       backgroundColor: "#E1EA72", // Light yellow-green
       textColor: "#000000"
+    }
+  ];
+
+  const accuracyCardsData = [
+    {
+      title: "Precision engineering at the UltraFactory",
+      description: "Ultrahuman's integrated production facility ensures gold-standard performance testing, providing complete control.",
+      imageSrc: "/accuracy.svg",
+      imageAlt: "Precision engineering facility",
+      hasBorder: true
+    },
+    {
+      title: "More accurate from the Finger than the Wrist",
+      description: "The finger, with its higher perfusion index and arterioles, serves as a richer and more accurate source of biomarker information.",
+      imageSrc: "/accuracy2.svg",
+      imageAlt: "Finger accuracy measurement",
+      hasBorder: false
+    },
+    {
+      title: "Trusted by the World's #1 Ranked Cycling Team and more",
+      description: "UAE Team Emirates, Team ADQ, and many other high-performance teams worldwide.",
+      imageSrc: "/accuracy3.svg",
+      imageAlt: "Professional cycling teams",
+      hasBorder: false
+    },
+    {
+      title: "Precision engineering at the UltraFactory",
+      description: "Ultrahuman's integrated production facility ensures gold-standard performance testing, providing complete control.",
+      imageSrc: "/accuracy4.svg",
+      imageAlt: "Precision engineering facility",
+      hasBorder: false
     }
   ];
     
@@ -167,7 +199,47 @@ export default function LandingPage() {
                   ))}
                 </div>
               </div>
-              <div className={styles.accuracyRight}></div>
+              <div className={styles.accuracyRight}>
+                <div className={styles.accuracyCard1} style={{marginTop: "110px"}}>
+                    <AccuracyCard
+                       
+                        title={accuracyCardsData[0].title}
+                        description={accuracyCardsData[0].description}
+                        imageSrc={accuracyCardsData[0].imageSrc}
+                        imageAlt={accuracyCardsData[0].imageAlt}
+                        hasBorder={accuracyCardsData[0].hasBorder}
+                    />
+                    <AccuracyCard
+                       
+                        title={accuracyCardsData[2].title}
+                        description={accuracyCardsData[2].description}
+                        imageSrc={accuracyCardsData[2].imageSrc}
+                        imageAlt={accuracyCardsData[2].imageAlt}
+                        hasBorder={accuracyCardsData[2].hasBorder}
+                    />
+
+                </div>
+                <div className={styles.accuracyCard2}>
+                    <AccuracyCard
+                       
+                        title={accuracyCardsData[1].title}
+                        description={accuracyCardsData[1].description}
+                        imageSrc={accuracyCardsData[1].imageSrc}
+                        imageAlt={accuracyCardsData[1].imageAlt}
+                        hasBorder={accuracyCardsData[1].hasBorder}
+                        />
+                    <AccuracyCard
+                       
+                        title={accuracyCardsData[3].title}
+                        description={accuracyCardsData[3].description}
+                        imageSrc={accuracyCardsData[3].imageSrc}
+                        imageAlt={accuracyCardsData[3].imageAlt}
+                        hasBorder={accuracyCardsData[3].hasBorder}
+                        />
+
+                </div>
+            
+              </div>
             </div>
           </section>
         </div>
