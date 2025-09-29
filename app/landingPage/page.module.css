@@ -42,12 +42,13 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
-  justify-content: space-between; 
+  justify-content: flex-start; 
   width: 100%;
   text-align: center;
   color: #ffffff;
   padding-top: clamp(48px, 12vw, 120px); /* responsive vertical start */
   text-align: center;
+  overflow: hidden;
 }
 
 .eyebrow {
@@ -105,11 +106,15 @@
 
 
  .ring {
-    width: 433px;
+    width: clamp(250px, 60vw, 433px);
     height: auto;
   }
   .ringAbsoluteWrapper {
     margin-top: clamp(10px, 10vw, 130px); 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .beautifulTextOuterWrapper{
     margin: 0 auto;
@@ -141,6 +146,72 @@
       text-align: left;
       font-size: 32px;
       line-height: 1.2;
+    }
+    
+    /* Hero section mobile adjustments */
+    .heroFrame {
+      height: clamp(400px, 60vh, 500px);
+    }
+    
+    .overlay {
+      padding-top: clamp(30px, 8vw, 60px);
+      padding-bottom: 20px;
+    }
+    
+    .eyebrow {
+      font-size: clamp(10px, 2.5vw, 12px);
+    }
+    
+    .title {
+      font-size: clamp(24px, 7vw, 36px);
+      margin: 0 0 clamp(6px, 1.5vw, 12px);
+    }
+    
+    .subtitle {
+      font-size: clamp(12px, 3vw, 14px);
+      margin: 0 0 clamp(12px, 2vw, 20px);
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+    .cta {
+      font-size: 12px;
+      padding: 12px 18px;
+      height: 35px;
+    }
+    
+    .ring {
+      width: clamp(200px, 50vw, 300px);
+      max-width: 90%;
+    }
+    
+    .ringAbsoluteWrapper {
+      margin-top: clamp(20px, 5vw, 40px);
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  /* Extra small mobile screens */
+  @media (max-width: 480px) {
+    .heroFrame {
+      height: clamp(350px, 55vh, 450px);
+    }
+    
+    .overlay {
+      padding-top: clamp(20px, 6vw, 40px);
+    }
+    
+    .title {
+      font-size: clamp(20px, 6vw, 28px);
+    }
+    
+    .ring {
+      width: clamp(160px, 45vw, 250px);
+    }
+    
+    .ringAbsoluteWrapper {
+      margin-top: clamp(10px, 3vw, 30px);
     }
   }
   .beautifulText{

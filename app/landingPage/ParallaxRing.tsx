@@ -13,13 +13,13 @@ if (typeof window !== 'undefined') {
 export default function ParallaxRing() {
   // 2. Create a ref to attach to the element we want to move
   const ringRef = useRef<HTMLDivElement>(null);
-  
-  // Define the maximum distance (in pixels) the ring should move up
-  const MAX_PARALLAX_Y_MOVEMENT = -400; 
 
   useEffect(() => {
     const ringElement = ringRef.current;
     if (!ringElement) return;
+    
+    // Define the maximum distance (in pixels) the ring should move up
+    const MAX_PARALLAX_Y_MOVEMENT = window.innerWidth <= 768 ? -200 : -400;
 
     // 3. Set up the GSAP animation linked to the scroll
     // We use .to() to animate from the current state (defined by CSS 'bottom: -150px') 
@@ -63,7 +63,7 @@ export default function ParallaxRing() {
         alt="Ultrahuman Ring AIR"
         width={433}
         height={394}
-        sizes="(max-width: 768px) 30vw, (max-width: 480px) 35vw, 25vw"
+        sizes="(max-width: 768px) 50vw, 433px"
         className={styles.ring}
         priority
       />
