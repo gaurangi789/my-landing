@@ -21,9 +21,9 @@ export default function ParallaxRing() {
     if (!ringElement) return;
     
     // Define different movement values for mobile and desktop
-    const MAX_PARALLAX_Y_MOVEMENT = isMobile ? -200 : -400;
+    const MAX_PARALLAX_Y_MOVEMENT = isMobile ? -300 : -400;
     const START_POSITION = isMobile ? "top bottom" : "top 80%";
-    const END_DISTANCE = isMobile ? "+=500" : "+=1000";
+    const END_DISTANCE = isMobile ? "+=800" : "+=1000";
 
     // 3. Set up the GSAP animation linked to the scroll
     // We use .to() to animate from the current state (defined by CSS 'bottom: -150px') 

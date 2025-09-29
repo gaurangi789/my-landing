@@ -140,15 +140,13 @@
 
   /* Mobile layout for beautifulTextOuterWrapper */
   @media (max-width: 768px) {
-    .hero {
-      margin-bottom: 100px; /* Adjusted space for new ring position */
-    }
+
     
     .beautifulTextOuterWrapper {
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
-      margin-top: 50px;
+      margin-top: 25px;
     }
     
     .aboutWrapper {
@@ -175,18 +173,19 @@
     .overlay {
       padding-top: 0;
       padding-bottom: 20px;
+      margin-top: 50px;
       position: relative;
       overflow: visible; /* Allow ring to extend outside overlay but contained by heroFrame */
     }
     
     .eyebrow {
-      font-size: clamp(10px, 2.5vw, 12px);
-      margin: 40px 0 clamp(6px, 1.2vw, 12px);
+      font-size: 10px;
+      margin: 25px 0 12px;
     }
     
     .title {
-      font-size: clamp(24px, 7vw, 36px);
-      margin: 0 0 clamp(6px, 1.5vw, 12px);
+      font-size: 31px;
+      margin-bottom: 12px;
     }
     
     .subtitle {
@@ -229,10 +228,6 @@
       padding-top: 0;
     }
     
-    .title {
-      font-size: clamp(20px, 6vw, 28px);
-    }
-    
     .ring {
       width: clamp(160px, 45vw, 250px);
     }
@@ -241,15 +236,18 @@
       margin-top: clamp(20px, 5vw, 40px);
     }
   }
-  .beautifulText{
-    text-align: justify;
-    font-family: Inter;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 48px;
-    line-height: 65px;
-    letter-spacing: -4%;
-    margin-top: 0 !important;
+  /* Desktop styles for beautifulText */
+  @media (min-width: 769px) {
+    .beautifulText{
+      text-align: justify;
+      font-family: Inter;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 48px;
+      line-height: 65px;
+      letter-spacing: -4%;
+      margin-top: 0 !important;
+    }
   }
   .about{
     width: 100%;
@@ -360,6 +358,9 @@
         .coloredBoxes {
             gap: clamp(8px, 1.5vw, 12px);
             margin: clamp(15px, 3vw, 30px) 0;
+        }
+        .precisionFrame{
+            margin-top: 25px;
         }
     }
 
