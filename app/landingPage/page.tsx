@@ -76,8 +76,9 @@ export default function LandingPage() {
               <Link href="/buyRing" className={styles.cta}>
                 Buy Now
               </Link>
-              <ParallaxRing />
+              {!isMobile && <ParallaxRing />}
             </div>
+            {isMobile && <ParallaxRing />}
           </div>    
         </section>
 

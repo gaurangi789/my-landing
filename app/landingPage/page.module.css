@@ -19,7 +19,7 @@
   margin-bottom: 32px;
   max-height: 730px;
   width: 100%;
-  
+  position: relative;
 }
 
 .heroFrame {
@@ -116,6 +116,19 @@
     justify-content: center;
     align-items: center;
   }
+  
+  /* Mobile-specific ring wrapper with absolute positioning */
+  .ringAbsoluteWrapperMobile {
+    position: absolute;
+    bottom: -180px; /* Start position - ring mostly below viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
   .beautifulTextOuterWrapper{
     margin: 0 auto;
     display: flex;
@@ -127,6 +140,10 @@
 
   /* Mobile layout for beautifulTextOuterWrapper */
   @media (max-width: 768px) {
+    .hero {
+      margin-bottom: 150px; /* Extra space for ring */
+    }
+    
     .beautifulTextOuterWrapper {
       flex-direction: column;
       align-items: flex-start;
@@ -151,11 +168,15 @@
     /* Hero section mobile adjustments */
     .heroFrame {
       height: clamp(400px, 60vh, 500px);
+      position: relative;
+      overflow: visible; /* Allow ring to extend outside */
     }
     
     .overlay {
       padding-top: 0;
       padding-bottom: 20px;
+      position: relative;
+      overflow: visible; /* Allow ring to extend outside */
     }
     
     .eyebrow {
@@ -182,14 +203,19 @@
     }
     
     .ring {
-      width: clamp(200px, 50vw, 300px);
+      width: clamp(250px, 70vw, 300px);
+      height: auto;
       max-width: 90%;
     }
     
+    /* Hide desktop ring wrapper on mobile */
     .ringAbsoluteWrapper {
-      margin-top: clamp(30px, 8vw, 60px);
-      position: relative;
-      z-index: 1;
+      display: none;
+    }
+    
+    /* Show mobile ring wrapper */
+    .ringAbsoluteWrapperMobile {
+      display: flex;
     }
   }
   
