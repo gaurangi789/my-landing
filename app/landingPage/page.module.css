@@ -46,7 +46,7 @@
   width: 100%;
   text-align: center;
   color: #ffffff;
-  padding-top: clamp(48px, 12vw, 120px); /* responsive vertical start */
+  padding-top: 0; /* Removed padding since eyebrow has 72px margin-top */
   text-align: center;
   overflow: hidden;
 }
@@ -58,7 +58,7 @@
     font-size: clamp(11px, 1.3vw, 14px);
     letter-spacing: clamp(0.05em, 0.5vw, 0.2em); 
     text-align: center;
-    margin: 0 0 clamp(6px, 1.2vw, 12px);
+    margin: 72px 0 clamp(6px, 1.2vw, 12px);
 }
 
 .title {
@@ -110,7 +110,7 @@
     height: auto;
   }
   .ringAbsoluteWrapper {
-    margin-top: clamp(10px, 10vw, 130px); 
+    margin-top: clamp(40px, 15vw, 180px); 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -154,12 +154,13 @@
     }
     
     .overlay {
-      padding-top: clamp(30px, 8vw, 60px);
+      padding-top: 0;
       padding-bottom: 20px;
     }
     
     .eyebrow {
       font-size: clamp(10px, 2.5vw, 12px);
+      margin: 40px 0 clamp(6px, 1.2vw, 12px);
     }
     
     .title {
@@ -186,7 +187,7 @@
     }
     
     .ringAbsoluteWrapper {
-      margin-top: clamp(20px, 5vw, 40px);
+      margin-top: clamp(30px, 8vw, 60px);
       position: relative;
       z-index: 1;
     }
@@ -199,7 +200,7 @@
     }
     
     .overlay {
-      padding-top: clamp(20px, 6vw, 40px);
+      padding-top: 0;
     }
     
     .title {
@@ -211,7 +212,7 @@
     }
     
     .ringAbsoluteWrapper {
-      margin-top: clamp(10px, 3vw, 30px);
+      margin-top: clamp(20px, 5vw, 40px);
     }
   }
   .beautifulText{
