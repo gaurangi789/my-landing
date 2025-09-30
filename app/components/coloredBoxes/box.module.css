@@ -8,7 +8,6 @@
   border-radius: clamp(20px, 3vw, 30px);
   padding: clamp(25px, 4vw, 40px) clamp(20px, 3vw, 41px);
   gap: clamp(8px, 1.5vw, 13px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .value {

@@ -1,7 +1,6 @@
 // components/FeatureCard/FeatureCard.tsx
 import React from 'react';
 import Image from 'next/image';
-// Note: You must create and import a corresponding CSS module for styling
 import styles from './FeatureCard.module.css'; 
 
 interface FeatureCardProps {

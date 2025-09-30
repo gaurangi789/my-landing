@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import styles from './page.module.css';
+import styles from '../../page.module.css';
 
 const carouselData = [
   { 
@@ -34,12 +34,11 @@ export default function CarouselSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress(prev => {
-        const newProgress = prev + 2; // Increment by 2% every 50ms (much faster)
+        const newProgress = prev + 2; 
         if (newProgress >= 100) {
-          // Move to next slide when progress reaches 100%
           const nextIndex = (activeIndex + 1) % carouselData.length;
           setActiveIndex(nextIndex);
-          return 0; // Reset progress
+          return 0; 
         }
         return newProgress;
       });
@@ -54,7 +53,6 @@ export default function CarouselSection() {
   };
   return (
     <section className={styles.carouselSection}>
-      {/* Current Active Slide - Displayed at Top */}
       <div className={styles.currentSlideContainer}>
         <div className={styles.activeTitleRow}>
           <div className={styles.slideTitleText} data-active="true">
@@ -62,7 +60,7 @@ export default function CarouselSection() {
           </div>
         </div>
         
-        {/* Progress Bar Timer */}
+       
         <div className={styles.progressBarWrapper}>
           <div 
             ref={progressBarRef} 

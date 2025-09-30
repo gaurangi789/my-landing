@@ -82,18 +82,37 @@
   transform: translateY(-50%);
   background: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  color: #000;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #000 !important;
+  font-size: 16px;
+  font-weight: 600;
+
+
+}
+
+/* Override Swiper's default button colors */
+.swiperWrapper :global(.swiper-button-prev),
+.swiperWrapper :global(.swiper-button-next) {
+  color: #000000 !important;
+  background: white !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  padding: 9px !important;
+}
+
+.swiperWrapper :global(.swiper-button-prev)::after,
+.swiperWrapper :global(.swiper-button-next)::after {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
 }
 
 .swiper-button-prev {
@@ -362,4 +381,10 @@
   .sizeGrid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.swiper-horizontal.swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 4px);
+    color: pink;
+    left: auto;
 }

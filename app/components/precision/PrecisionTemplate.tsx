@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from './PrecisionTemplate.module.css'; // Create a new CSS module
+import styles from './PrecisionTemplate.module.css'; 
 
 interface PrecisionTemplateProps {
     title: string;

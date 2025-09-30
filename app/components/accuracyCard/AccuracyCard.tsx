@@ -1,7 +1,6 @@
 // components/FeatureCard/FeatureCard.tsx
 import React from 'react';
 import Image from 'next/image';
-// Note: You must create and import a corresponding CSS module for styling
 import styles from './AccuracyCard.module.css'; 
 
 interface AccuracyCardProps {
@@ -10,7 +9,6 @@ interface AccuracyCardProps {
   tag?: string; 
   imageSrc: string; 
   imageAlt: string;
-  hasBorder?: boolean;
 }
 
 export default function AccuracyCard({ 
@@ -18,19 +16,7 @@ export default function AccuracyCard({
   description,  
   imageSrc, 
   imageAlt,
-  hasBorder = false
 }: AccuracyCardProps) {
-  const handleClick = () => {
-    // Add any click functionality here
-    console.log(`Card clicked: ${title}`);
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleClick();
-    }
-  };
 
   return (
     <div 

@@ -1,5 +1,4 @@
 .card {
- 
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 23px;
@@ -9,7 +8,6 @@
     max-width: 333px;
     max-height: 323px;
     margin-bottom: 10px;
-    
 }
 
 
@@ -67,23 +65,25 @@
 @media (max-width: 768px) {
     .card {
         max-width: 100%;
+        max-height: none;
         padding: 20px;
         gap: 12px;
+        height: auto;
     }
     
     .imageWrapper {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
     .title {
         font-size: 18px;
         line-height: 24px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
     
     .description {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 18px;
     }
 }
 
