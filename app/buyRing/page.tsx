@@ -27,7 +27,6 @@ const useSelection = () => {
   return context;
 };
 
-// Ring images data - 3 colors with 3 images each
 const ringImages = [
   // Golden Ring Images
   { id: 1, src: '/goldenRing.avif', alt: 'Ring AIR Golden - View 1', color: 'golden' },
