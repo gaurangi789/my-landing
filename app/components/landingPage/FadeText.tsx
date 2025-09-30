@@ -28,7 +28,6 @@ const FadeText: React.FC<FadeTextProps> = ({ className, children }) => {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    console.log(el,'el');
 
     gsap.set(el.querySelectorAll('.word-wrapper'), { 
       color: '#999' // Initial grayed-out color
